@@ -1195,6 +1195,53 @@ strong { font-weight: 600; }
 }
 
 /* ==================== */
+/* Demo Videos */
+/* ==================== */
+.demo-video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 24px;
+}
+
+.demo-video-item {
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+}
+
+.demo-video-item h3 {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.video-desc {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ==================== */
 /* Responsive */
 /* ==================== */
 @media (max-width: 1200px) {
@@ -1211,6 +1258,7 @@ strong { font-weight: 600; }
     .bim-flow { flex-direction: column; }
     .bim-use-cases { grid-template-columns: 1fr 1fr; }
     .timeline-bar { grid-template-columns: 1fr; }
+    .demo-video-grid { grid-template-columns: 1fr; gap: 24px; }
 }
 
 @media (max-width: 768px) {
