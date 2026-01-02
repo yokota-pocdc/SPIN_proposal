@@ -17,7 +17,7 @@
             <div class="logo">Investor Pitch</div>
         </div>
         <div class="nav-center">
-            <span class="page-indicator"><span id="currentPage">1</span> / <span id="totalPages">17</span></span>
+            <span class="page-indicator"><span id="currentPage">1</span> / <span id="totalPages">18</span></span>
         </div>
         <div class="nav-right">
             <span class="tag">Confidential</span>
@@ -270,59 +270,99 @@
         <section class="slide" data-slide="7">
             <div class="slide-content">
                 <div class="pitch-label">WEDGE</div>
-                <h2>工場・倉庫の「既存ロボット運用」</h2>
+                <h2>工場・倉庫：既存ロボット運用の"地図SRE"を置き換える</h2>
                 <p class="section-lead">
-                    最初の顧客は "ロボットは動いているが、地図運用が破綻している" 現場。<br>
-                    更新コストが即PLに効くため、導入理由が明確で、横展開の必然がある。
+                    最初の顧客は AMR/AGVは稼働しているが、地図運用が破綻している現場。<br>
+                    レイアウト変更・棚/資材の増減・安全監査が、停止/制限運用を生み、拠点展開を止めている。
                 </p>
                 <div class="pitch-grid-2">
                     <div>
-                        <h4>現場で起きている「具体業務」</h4>
+                        <h4>現場で起きている"具体業務"とコスト</h4>
                         <div class="pitch-card">
-                            <p><strong>地図運用がボトルネック</strong></p>
                             <ul>
-                                <li><strong>レイアウト変更</strong> → 走行不安定・再調整</li>
-                                <li><strong>搬送物・障害物の増減</strong> → ルート再設計</li>
-                                <li><strong>新規エリア追加</strong> → 再スキャン/再マッピング</li>
-                                <li><strong>拠点追加</strong> → 施設ごとに地図制作が再発</li>
+                                <li><strong>再マッピング/再調整</strong>：レイアウト変更のたびにベンダ/現場が対応（夜間・休日対応が常態化）</li>
+                                <li><strong>ルート再設計/通行制限</strong>：障害物増減で迂回が増え、スループット低下</li>
+                                <li><strong>新規エリア追加</strong>：エリアごとに再スキャン・テスト走行・安全確認</li>
+                                <li><strong>拠点追加</strong>：施設ごとにゼロから地図制作（ノウハウ属人化）</li>
                             </ul>
                         </div>
-                        <h4 style="margin-top: 20px;">当社の提供範囲</h4>
-                        <div class="pitch-card">
-                            <ul>
-                                <li><strong>更新可能な空間データ</strong>（差分更新・履歴・責任）</li>
-                                <li><strong>ロボット向け</strong>機械可読フォーマット + API</li>
-                                <li><strong>監査・安全</strong>に耐える真正性</li>
-                                <li><strong>複数拠点テンプレート化</strong></li>
-                            </ul>
+                        <div class="pitch-alert" style="margin-top: 16px;">
+                            痛みの本質：地図が"運用資産"ではなく"都度工事"になっている（更新・責任・履歴がない）
                         </div>
                     </div>
                     <div>
-                        <h4>ROIが出る理由</h4>
-                        <div class="pitch-card highlight">
-                            <p><strong>ROIの主要ドライバー</strong></p>
+                        <h4>当社が提供するもの（ロボット運用に必要な最小セット）</h4>
+                        <div class="pitch-card">
                             <ul>
-                                <li><strong>再マッピング工数削減</strong></li>
-                                <li><strong>停止・制限運用の削減</strong>（稼働率の回復）</li>
-                                <li><strong>多拠点展開の再利用</strong></li>
-                                <li><strong>事故/監査コストの低減</strong></li>
+                                <li><strong>更新可能な空間データ</strong>：差分更新／ロールバック／変更履歴（監査対応）</li>
+                                <li><strong>機械可読フォーマット + API</strong>：ロボット運用に直結する配信・参照インターフェース</li>
+                                <li><strong>真正性と責任の担保</strong>：誰が・いつ・何を更新したかを証明可能に</li>
+                                <li><strong>複数拠点テンプレート</strong>：拠点展開時の"再発コスト"を消す</li>
                             </ul>
                         </div>
-                        <div class="pitch-scale-box">
-                            <h4>スケールの論点</h4>
-                            <div class="scale-points">
-                                <div><strong>Land</strong>: 既存運用の「更新痛み」に刺さる</div>
-                                <div><strong>Expand</strong>: 1拠点で回った瞬間に横展開が経営課題に</div>
-                                <div><strong>Moat</strong>: 運用データが資産化し競争優位に</div>
-                            </div>
+                        <div class="pitch-card highlight" style="margin-top: 16px;">
+                            <h4>ROIの計算式</h4>
+                            <p style="font-size: 0.9rem;">年間効果 =（再マップ回数 × 工数/外注費）+（停止時間 × 搬送価値）+（拠点追加の立上げ費逓減）</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 08: MARKET -->
+        <!-- 08: IMPLEMENTATION PROCESS -->
         <section class="slide" data-slide="8">
+            <div class="slide-content">
+                <div class="pitch-label">IMPLEMENTATION</div>
+                <h2>導入プロセス（既存ロボットを止めずに入れる）</h2>
+                <div class="implementation-steps">
+                    <div class="impl-step">
+                        <div class="step-header">
+                            <span class="step-num">0</span>
+                            <span class="step-title">現状診断</span>
+                            <span class="step-duration">1週間</span>
+                        </div>
+                        <p>ロボット台数、現行マップ形式、変更頻度、停止/制限運用の実態を棚卸し</p>
+                    </div>
+                    <div class="impl-step">
+                        <div class="step-header">
+                            <span class="step-num">1</span>
+                            <span class="step-title">空間データ生成</span>
+                            <span class="step-duration">1-2週間</span>
+                        </div>
+                        <p>3D生成＋運用で使える粒度へ整形（差分更新の基準点を作る）</p>
+                    </div>
+                    <div class="impl-step">
+                        <div class="step-header">
+                            <span class="step-num">2</span>
+                            <span class="step-title">運用API接続</span>
+                            <span class="step-duration">1-2週間</span>
+                        </div>
+                        <p>既存FMS/WMS/ロボット管理への接続。更新フロー（承認・ロールバック）を定義</p>
+                    </div>
+                    <div class="impl-step highlight">
+                        <div class="step-header">
+                            <span class="step-num">3</span>
+                            <span class="step-title">運用開始</span>
+                            <span class="step-duration">継続</span>
+                        </div>
+                        <p>レイアウト変更時の"更新→配信→監査証跡"をルーチン化。複数拠点へ横展開</p>
+                    </div>
+                </div>
+                <div class="pitch-card" style="margin-top: 24px;">
+                    <h4>決裁者/関与者</h4>
+                    <div class="stakeholders">
+                        <span class="stakeholder">工場長/物流責任者</span>
+                        <span class="stakeholder">ロボット運用責任者</span>
+                        <span class="stakeholder">EHS/安全</span>
+                        <span class="stakeholder">IT/OT</span>
+                        <span class="stakeholder">SI/ロボットベンダ</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 09: MARKET -->
+        <section class="slide" data-slide="9">
             <div class="slide-content">
                 <div class="pitch-label">MARKET</div>
                 <h2>巨大市場の構造変化</h2>
@@ -361,8 +401,8 @@
             </div>
         </section>
 
-        <!-- 09: BUSINESS MODEL -->
-        <section class="slide" data-slide="9">
+        <!-- 10: BUSINESS MODEL -->
+        <section class="slide" data-slide="10">
             <div class="slide-content">
                 <div class="pitch-label">BUSINESS MODEL</div>
                 <h2>収益モデル</h2>
@@ -415,8 +455,8 @@
             </div>
         </section>
 
-        <!-- 10: TRACTION -->
-        <section class="slide" data-slide="10">
+        <!-- 11: TRACTION -->
+        <section class="slide" data-slide="11">
             <div class="slide-content">
                 <div class="pitch-label">TRACTION</div>
                 <h2>実績とマイルストーン</h2>
@@ -467,8 +507,8 @@
             </div>
         </section>
 
-        <!-- 11: WHY US -->
-        <section class="slide" data-slide="11">
+        <!-- 12: WHY US -->
+        <section class="slide" data-slide="12">
             <div class="slide-content">
                 <div class="pitch-label">WHY US</div>
                 <h2>可視化ではなく運用インフラを作る</h2>
@@ -500,8 +540,8 @@
             </div>
         </section>
 
-        <!-- 12: COMPETITION -->
-        <section class="slide" data-slide="12">
+        <!-- 13: COMPETITION -->
+        <section class="slide" data-slide="13">
             <div class="slide-content">
                 <div class="pitch-label">COMPETITION</div>
                 <h2>参入障壁</h2>
@@ -544,8 +584,8 @@
             </div>
         </section>
 
-        <!-- 13: GO-TO-MARKET -->
-        <section class="slide" data-slide="13">
+        <!-- 14: GO-TO-MARKET -->
+        <section class="slide" data-slide="14">
             <div class="slide-content">
                 <div class="pitch-label">GO-TO-MARKET</div>
                 <h2>成長戦略</h2>
@@ -601,8 +641,8 @@
             </div>
         </section>
 
-        <!-- 14: TEAM -->
-        <section class="slide" data-slide="14">
+        <!-- 15: TEAM -->
+        <section class="slide" data-slide="15">
             <div class="slide-content">
                 <div class="pitch-label">TEAM</div>
                 <h2>チーム</h2>
@@ -631,8 +671,8 @@
             </div>
         </section>
 
-        <!-- 15: FINANCIALS -->
-        <section class="slide" data-slide="15">
+        <!-- 16: FINANCIALS -->
+        <section class="slide" data-slide="16">
             <div class="slide-content">
                 <div class="pitch-label">FINANCIALS</div>
                 <h2>資金使途と財務計画</h2>
@@ -674,8 +714,8 @@
             </div>
         </section>
 
-        <!-- 16: EXIT -->
-        <section class="slide" data-slide="16">
+        <!-- 17: EXIT -->
+        <section class="slide" data-slide="17">
             <div class="slide-content">
                 <div class="pitch-label">EXIT</div>
                 <h2>エグジット戦略</h2>
@@ -701,8 +741,8 @@
             </div>
         </section>
 
-        <!-- 17: CLOSING -->
-        <section class="slide" data-slide="17">
+        <!-- 18: CLOSING -->
+        <section class="slide" data-slide="18">
             <div class="slide-content centered">
                 <div class="pitch-label">CLOSING</div>
                 <h1 class="title-hero">

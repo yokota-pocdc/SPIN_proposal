@@ -398,6 +398,96 @@
     font-weight: bold;
 }
 
+/* Implementation Steps */
+.implementation-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.impl-step {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 20px 24px;
+}
+
+.impl-step.highlight {
+    background: var(--accent-light);
+    border-color: var(--accent-primary);
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.step-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: var(--accent-primary);
+    color: white;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+.impl-step.highlight .step-num {
+    background: var(--accent-primary);
+}
+
+.step-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    flex: 1;
+}
+
+.step-duration {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    background: var(--accent-light);
+    padding: 4px 12px;
+    border-radius: 2px;
+}
+
+.impl-step.highlight .step-duration {
+    background: var(--accent-primary);
+    color: white;
+}
+
+.impl-step p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin: 0;
+    padding-left: 48px;
+}
+
+/* Stakeholders */
+.stakeholders {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.stakeholder {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 6px 14px;
+    border-radius: 2px;
+}
+
 /* Team Grid */
 .team-grid {
     display: grid;
