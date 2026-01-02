@@ -13,13 +13,13 @@
     <!-- Navigation -->
     <nav class="slide-nav">
         <div class="nav-left">
-            <div class="logo">AIST JOINT RESEARCH</div>
+            <div class="logo">AIST共同研究提案</div>
         </div>
         <div class="nav-center">
             <span class="page-indicator"><span id="currentPage">1</span> / <span id="totalPages">10</span></span>
         </div>
         <div class="nav-right">
-            <span class="tag mono">DRAFT v2.0</span>
+            <span class="tag">Confidential Draft</span>
         </div>
     </nav>
 
@@ -28,83 +28,86 @@
         <div class="progress-fill" id="progressFill"></div>
     </div>
 
-    <!-- Slide Container -->
+    <!-- Slides -->
     <div class="slides-container" id="slidesContainer">
 
         <!-- Slide 1: Title -->
         <section class="slide active" data-slide="1">
             <div class="slide-content centered">
-                <span class="mono accent">共同研究提案書 | Executive Summary</span>
-                <h1 class="title-xl">
+                <h1 class="title-hero">
                     3D Gaussian Splatting<br>
-                    <span class="text-muted">×</span> Spatial Intelligence
+                    <span class="title-sub">× 空間知能システム</span>
                 </h1>
-                <p class="subtitle">
-                    ロボット・AIが実空間を「理解」するための次世代空間表現。<br>
-                    フォトリアリスティックな視覚情報と、強固なデータガバナンス（Trusted Digital Twin）の融合。
+                <p class="lead">
+                    ロボット・AIが実空間を「理解」し「行動」するための<br>
+                    <strong>次世代空間表現</strong>と<strong>信頼基盤</strong>の研究開発
                 </p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="mono">Duration</span>
-                        <strong>2026 - 2028</strong>
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <span class="stat-label">期間</span>
+                        <span class="stat-value">3年間</span>
+                        <span class="stat-sub">2026-2028</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="mono">Partner</span>
-                        <strong>AIST Japan</strong>
+                    <div class="stat-box">
+                        <span class="stat-label">予算</span>
+                        <span class="stat-value">3,600万円</span>
+                        <span class="stat-sub">年間1,200万円</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="mono">Budget</span>
-                        <strong>36M JPY / 3yr</strong>
+                    <div class="stat-box">
+                        <span class="stat-label">目標論文</span>
+                        <span class="stat-value">6-9件</span>
+                        <span class="stat-sub">ICRA, IROS等</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="mono">Target KPI</span>
-                        <strong>Reloc. err. &lt;10cm</strong>
+                    <div class="stat-box accent">
+                        <span class="stat-label">主要KPI</span>
+                        <span class="stat-value">&lt;10cm</span>
+                        <span class="stat-sub">再局在化誤差</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Slide 2: Problem -->
+        <!-- Slide 2: Background & Problem -->
         <section class="slide" data-slide="2">
             <div class="slide-content">
-                <span class="mono accent">01 — The Challenge</span>
-                <h2>従来の空間表現の限界</h2>
-                <div class="two-column">
-                    <div class="column">
-                        <div class="problem-card">
-                            <div class="problem-icon">📡</div>
-                            <h3>点群 (Point Cloud)</h3>
-                            <ul class="problem-list">
-                                <li>密度の不均一性</li>
-                                <li>テクスチャ情報の欠落</li>
-                                <li>計算負荷が大きい</li>
-                            </ul>
-                            <div class="diagram-box">
-                                <div class="point-cloud-viz">
-                                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                                    <span class="dot"></span><span class="dot gap"></span><span class="dot"></span>
-                                    <span class="dot"></span><span class="dot"></span><span class="dot gap"></span>
-                                </div>
-                                <span class="diagram-label">疎らな点群データ</span>
+                <h2>なぜこの研究が必要か</h2>
+                <div class="context-box">
+                    <p class="context-lead">製造・物流・サービス業でロボット導入が加速する中、<br><strong>環境認識・空間理解の精度</strong>が実用化の鍵となっている</p>
+                </div>
+                <div class="comparison-table">
+                    <div class="compare-col problem">
+                        <h3>従来手法の限界</h3>
+                        <div class="compare-item">
+                            <div class="compare-header">
+                                <span class="compare-icon">📡</span>
+                                <strong>点群・SLAM</strong>
                             </div>
+                            <ul>
+                                <li>密度が不均一で認識精度にばらつき</li>
+                                <li>テクスチャ欠落でオブジェクト識別困難</li>
+                                <li>リアルタイム処理の計算負荷大</li>
+                            </ul>
+                        </div>
+                        <div class="compare-item">
+                            <div class="compare-header">
+                                <span class="compare-icon">🏗️</span>
+                                <strong>BIM・CAD</strong>
+                            </div>
+                            <ul>
+                                <li>設計データと実空間（As-built）の乖離</li>
+                                <li>動的変化に対応困難</li>
+                                <li>幾何情報のみ、視覚・意味情報が不足</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="problem-card">
-                            <div class="problem-icon">🏗️</div>
-                            <h3>BIM / CAD</h3>
-                            <ul class="problem-list">
-                                <li>設計と実空間の乖離</li>
-                                <li>動的変化に非対応</li>
-                                <li>視覚的情報が不足</li>
-                            </ul>
-                            <div class="diagram-box">
-                                <div class="bim-gap-viz">
-                                    <div class="bim-design">設計</div>
-                                    <div class="bim-arrow">≠</div>
-                                    <div class="bim-reality">実空間</div>
-                                </div>
-                                <span class="diagram-label">As-built との乖離</span>
+                    <div class="compare-arrow">→</div>
+                    <div class="compare-col solution">
+                        <h3 class="gradient-text">3DGSの可能性</h3>
+                        <div class="solution-card">
+                            <p class="solution-lead">フォトリアリスティックな空間表現を<br><strong>高速</strong>に生成できる新技術</p>
+                            <div class="solution-but">
+                                <span class="but-label">しかし</span>
+                                <p>ロボット・AI応用での有効性、<br>特に<strong>セマンティック統合手法</strong>は未研究</p>
                             </div>
                         </div>
                     </div>
@@ -112,55 +115,39 @@
             </div>
         </section>
 
-        <!-- Slide 3: Solution -->
+        <!-- Slide 3: Research Hypothesis -->
         <section class="slide" data-slide="3">
             <div class="slide-content">
-                <span class="mono accent">02 — Our Approach</span>
-                <h2 class="gradient-text">3DGS × Semantic × Trusted DT</h2>
-                <div class="solution-diagram">
-                    <div class="solution-flow">
-                        <div class="flow-node input">
-                            <div class="node-icon">📷</div>
-                            <span>画像群</span>
-                        </div>
-                        <div class="flow-arrow">→</div>
-                        <div class="flow-node process highlight">
-                            <div class="node-icon">🔮</div>
-                            <span>3D Gaussian<br>Splatting</span>
-                        </div>
-                        <div class="flow-arrow">→</div>
-                        <div class="flow-node process">
-                            <div class="node-icon">🏷️</div>
-                            <span>Semantic<br>Integration</span>
-                        </div>
-                        <div class="flow-arrow">→</div>
-                        <div class="flow-node output">
-                            <div class="node-icon">🤖</div>
-                            <span>ロボット<br>タスク実行</span>
+                <h2>中心仮説と検証項目</h2>
+                <div class="hypothesis-box">
+                    <div class="hypothesis-main">
+                        <span class="hypothesis-label">中心仮説</span>
+                        <p>3DGSの<strong>フォトリアル表現</strong>と<strong>セマンティック統合</strong>を組み合わせることで、<br>従来表現では困難だった環境理解の頑健性が高まり、<br><strong>ロボットタスク性能が有意に改善する</strong></p>
+                    </div>
+                </div>
+                <div class="verification-grid">
+                    <div class="verify-item">
+                        <span class="verify-num">Q1</span>
+                        <div class="verify-content">
+                            <strong>3DGS vs 点群/SLAM</strong>
+                            <p>再局在・経路計画・物体探索で<br>どの条件下でどの程度向上するか？</p>
                         </div>
                     </div>
-                    <div class="solution-benefits">
-                        <div class="benefit-card">
-                            <div class="benefit-check">✓</div>
-                            <div>
-                                <strong>フォトリアル</strong>
-                                <p>高品質な視覚表現でロボットの認識精度向上</p>
-                            </div>
+                    <div class="verify-item">
+                        <span class="verify-num">Q2</span>
+                        <div class="verify-content">
+                            <strong>信頼性担保の効果</strong>
+                            <p>真正性・履歴・利用制御が<br>誤作動リスク低減にどう寄与するか？</p>
                         </div>
-                        <div class="benefit-card">
-                            <div class="benefit-check">✓</div>
-                            <div>
-                                <strong>意味理解</strong>
-                                <p>音声アノテーション + LLMによる空間クエリ</p>
-                            </div>
-                        </div>
-                        <div class="benefit-card">
-                            <div class="benefit-check">✓</div>
-                            <div>
-                                <strong>信頼基盤</strong>
-                                <p>Provenance / Versioning / Access Control</p>
-                            </div>
-                        </div>
+                    </div>
+                </div>
+                <div class="kpi-summary">
+                    <h4>定量評価指標</h4>
+                    <div class="kpi-chips">
+                        <span class="kpi-chip">再局在誤差 cm級</span>
+                        <span class="kpi-chip">経路計画成功率 &gt;90%</span>
+                        <span class="kpi-chip">推論レイテンシ &lt;50ms</span>
+                        <span class="kpi-chip">アノテーション時間削減率</span>
                     </div>
                 </div>
             </div>
@@ -169,42 +156,41 @@
         <!-- Slide 4: Deliverables -->
         <section class="slide" data-slide="4">
             <div class="slide-content">
-                <span class="mono accent">Key Deliverables</span>
-                <h2>本研究の成果物</h2>
-                <div class="deliverables-large">
-                    <div class="deliverable-item">
-                        <div class="deliverable-num">01</div>
-                        <div class="deliverable-content">
+                <h2>研究成果物</h2>
+                <div class="deliverables-list">
+                    <div class="deliverable-row">
+                        <div class="del-icon">📊</div>
+                        <div class="del-content">
                             <h3>評価プロトコル＋ベンチマーク</h3>
                             <p>3DGS空間表現のロボットタスク性能評価基準</p>
-                            <div class="deliverable-detail">
-                                <span class="tag-sm">再局在化精度</span>
-                                <span class="tag-sm">経路計画成功率</span>
-                                <span class="tag-sm">オープンデータセット</span>
+                            <div class="del-outputs">
+                                <span>オープンデータセット</span>
+                                <span>評価ツールキット</span>
+                                <span>ベースライン比較結果</span>
                             </div>
                         </div>
                     </div>
-                    <div class="deliverable-item">
-                        <div class="deliverable-num">02</div>
-                        <div class="deliverable-content">
-                            <h3>空間クエリ/指示理解モジュール</h3>
-                            <p>Neuro-Symbolicな空間知能システム</p>
-                            <div class="deliverable-detail">
-                                <span class="tag-sm">音声アノテーション</span>
-                                <span class="tag-sm">LLM統合</span>
-                                <span class="tag-sm">RAGアーキテクチャ</span>
+                    <div class="deliverable-row">
+                        <div class="del-icon">🎙️</div>
+                        <div class="del-content">
+                            <h3>空間クエリ・指示理解モジュール</h3>
+                            <p>音声アノテーション＋Neuro-Symbolicアーキテクチャ</p>
+                            <div class="del-outputs">
+                                <span>音声→空間座標マッピング</span>
+                                <span>LLM統合システム</span>
+                                <span>実装ガイドライン</span>
                             </div>
                         </div>
                     </div>
-                    <div class="deliverable-item">
-                        <div class="deliverable-num">03</div>
-                        <div class="deliverable-content">
-                            <h3>Trusted DT参照アーキテクチャ</h3>
+                    <div class="deliverable-row">
+                        <div class="del-icon">🔐</div>
+                        <div class="del-content">
+                            <h3>Trusted Digital Twin参照アーキテクチャ</h3>
                             <p>空間データガバナンスの実装と要件仕様</p>
-                            <div class="deliverable-detail">
-                                <span class="tag-sm">来歴管理</span>
-                                <span class="tag-sm">差分配信</span>
-                                <span class="tag-sm">権限制御</span>
+                            <div class="del-outputs">
+                                <span>Provenance記録方式</span>
+                                <span>差分配信プロトコル</span>
+                                <span>アクセス制御仕様</span>
                             </div>
                         </div>
                     </div>
@@ -212,61 +198,61 @@
             </div>
         </section>
 
-        <!-- Slide 5: Research Item 1 - 3DGS -->
+        <!-- Slide 5: Research Item 1 -->
         <section class="slide" data-slide="5">
             <div class="slide-content">
-                <span class="mono accent">Research Item 01 — Foundation</span>
-                <h2>3DGS環境表現の構築と評価</h2>
-                <div class="research-layout">
-                    <div class="research-diagram">
-                        <div class="pipeline-diagram">
-                            <div class="pipeline-stage">
-                                <div class="stage-box">
-                                    <span class="stage-icon">📸</span>
-                                    <span class="stage-label">多視点撮影</span>
-                                </div>
-                            </div>
-                            <div class="pipeline-connector"></div>
-                            <div class="pipeline-stage">
-                                <div class="stage-box highlight">
-                                    <span class="stage-icon">⚡</span>
-                                    <span class="stage-label">3DGS生成</span>
-                                </div>
-                            </div>
-                            <div class="pipeline-connector"></div>
-                            <div class="pipeline-stage">
-                                <div class="stage-box">
-                                    <span class="stage-icon">🎯</span>
-                                    <span class="stage-label">品質評価</span>
-                                </div>
-                            </div>
-                            <div class="pipeline-connector"></div>
-                            <div class="pipeline-stage">
-                                <div class="stage-box">
-                                    <span class="stage-icon">🤖</span>
-                                    <span class="stage-label">ロボット検証</span>
-                                </div>
-                            </div>
+                <div class="research-header">
+                    <span class="research-num">研究項目 1</span>
+                    <h2>3DGS環境表現の構築と評価</h2>
+                </div>
+                <div class="research-body">
+                    <div class="pipeline-visual">
+                        <div class="pipeline-step">
+                            <div class="step-circle">1</div>
+                            <span class="step-title">多視点撮影</span>
+                            <span class="step-desc">屋内環境の<br>画像取得</span>
+                        </div>
+                        <div class="pipeline-arrow"></div>
+                        <div class="pipeline-step highlight">
+                            <div class="step-circle">2</div>
+                            <span class="step-title">3DGS生成</span>
+                            <span class="step-desc">Gaussian<br>最適化</span>
+                        </div>
+                        <div class="pipeline-arrow"></div>
+                        <div class="pipeline-step">
+                            <div class="step-circle">3</div>
+                            <span class="step-title">シミュレータ統合</span>
+                            <span class="step-desc">ロボット<br>検証環境</span>
+                        </div>
+                        <div class="pipeline-arrow"></div>
+                        <div class="pipeline-step">
+                            <div class="step-circle">4</div>
+                            <span class="step-title">性能評価</span>
+                            <span class="step-desc">タスク<br>ベンチマーク</span>
                         </div>
                     </div>
-                    <div class="research-kpi">
-                        <h4>主要評価指標</h4>
-                        <div class="kpi-grid">
-                            <div class="kpi-item">
-                                <span class="kpi-value">&lt;10cm</span>
-                                <span class="kpi-label">再局在化誤差</span>
+                    <div class="metrics-panel">
+                        <h4>評価指標</h4>
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <span class="metric-value">&lt;10cm</span>
+                                <span class="metric-name">再局在化誤差</span>
+                                <span class="metric-baseline">vs 点群: 数十cm</span>
                             </div>
-                            <div class="kpi-item">
-                                <span class="kpi-value">&lt;50ms</span>
-                                <span class="kpi-label">推論レイテンシ</span>
+                            <div class="metric-card">
+                                <span class="metric-value">&gt;90%</span>
+                                <span class="metric-name">経路計画成功率</span>
+                                <span class="metric-baseline">複雑環境での検証</span>
                             </div>
-                            <div class="kpi-item">
-                                <span class="kpi-value">&lt;4GB</span>
-                                <span class="kpi-label">GPUメモリ</span>
+                            <div class="metric-card">
+                                <span class="metric-value">&lt;50ms</span>
+                                <span class="metric-name">推論レイテンシ</span>
+                                <span class="metric-baseline">エッジ動作考慮</span>
                             </div>
-                            <div class="kpi-item">
-                                <span class="kpi-value">&gt;90%</span>
-                                <span class="kpi-label">経路計画成功率</span>
+                            <div class="metric-card">
+                                <span class="metric-value">&lt;4GB</span>
+                                <span class="metric-name">GPUメモリ</span>
+                                <span class="metric-baseline">軽量化手法開発</span>
                             </div>
                         </div>
                     </div>
@@ -274,179 +260,176 @@
             </div>
         </section>
 
-        <!-- Slide 6: Research Item 2 - Semantic -->
+        <!-- Slide 6: Research Item 2 -->
         <section class="slide" data-slide="6">
             <div class="slide-content">
-                <span class="mono accent">Research Item 02 — Intelligence</span>
-                <h2>Semantic Integration</h2>
-                <div class="neuro-symbolic-diagram">
-                    <div class="ns-architecture">
-                        <div class="ns-layer user">
-                            <div class="layer-label">ユーザー入力</div>
-                            <div class="layer-content">
-                                <span class="input-example">"危険区域を避けて棚Aへ"</span>
-                            </div>
-                        </div>
-                        <div class="ns-arrow">↓</div>
-                        <div class="ns-split">
-                            <div class="ns-branch neural">
-                                <div class="branch-header">Neural（LLM）</div>
-                                <div class="branch-content">
-                                    <ul>
-                                        <li>自然言語解釈</li>
-                                        <li>意味推論</li>
-                                        <li>曖昧性解消</li>
-                                    </ul>
-                                </div>
-                                <div class="branch-output">制約条件生成</div>
-                            </div>
-                            <div class="ns-branch symbolic">
-                                <div class="branch-header">Symbolic（既存アルゴリズム）</div>
-                                <div class="branch-content">
-                                    <ul>
-                                        <li>経路計画</li>
-                                        <li>衝突検出</li>
-                                        <li>安全判定</li>
-                                    </ul>
-                                </div>
-                                <div class="branch-output">決定論的実行</div>
-                            </div>
-                        </div>
-                        <div class="ns-arrow">↓</div>
-                        <div class="ns-layer output">
-                            <div class="layer-label">ロボット動作</div>
-                            <div class="layer-content">
-                                <span class="safety-badge">安全性担保</span>
+                <div class="research-header">
+                    <span class="research-num">研究項目 2</span>
+                    <h2>セマンティック統合型空間知能</h2>
+                </div>
+                <div class="ns-diagram-large">
+                    <div class="ns-input-section">
+                        <div class="ns-input-box">
+                            <span class="ns-label">ユーザー指示（曖昧・省略を含む）</span>
+                            <div class="ns-examples">
+                                <span class="example">"あの棚の奥へ"</span>
+                                <span class="example">"危険区域を避けて"</span>
                             </div>
                         </div>
                     </div>
-                    <div class="ns-annotation">
-                        <div class="annotation-card">
-                            <div class="annotation-icon">🎙️</div>
-                            <div class="annotation-text">
-                                <strong>音声アノテーション</strong>
-                                <p>スキャン時に音声でセマンティック情報を付与。後処理の負担を大幅削減。</p>
-                            </div>
+                    <div class="ns-flow-arrow">↓</div>
+                    <div class="ns-branches">
+                        <div class="ns-branch-box neural">
+                            <div class="branch-title">Neural（LLM）</div>
+                            <div class="branch-role">意味解釈・曖昧性解消</div>
+                            <ul class="branch-tasks">
+                                <li>自然言語命令の解釈</li>
+                                <li>意味推論・属性情報処理</li>
+                                <li>制約条件の生成</li>
+                            </ul>
+                            <div class="branch-safety">⚠️ 決定権なし</div>
                         </div>
+                        <div class="ns-branch-box symbolic">
+                            <div class="branch-title">Symbolic（既存アルゴリズム）</div>
+                            <div class="branch-role">安全クリティカル判定</div>
+                            <ul class="branch-tasks">
+                                <li>経路計画・衝突検出</li>
+                                <li>最終経路生成</li>
+                                <li>停止判断</li>
+                            </ul>
+                            <div class="branch-safety safe">✓ 決定論的に担保</div>
+                        </div>
+                    </div>
+                    <div class="ns-flow-arrow">↓</div>
+                    <div class="ns-output-section">
+                        <div class="ns-output-box">
+                            <span class="output-badge">安全なロボット動作</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="annotation-highlight">
+                    <span class="highlight-icon">🎙️</span>
+                    <div>
+                        <strong>音声アノテーション</strong>：スキャン時に音声でセマンティック付与。後処理アノテーションの負担を大幅削減。
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Slide 7: Research Item 3 - BIM -->
+        <!-- Slide 7: Research Item 3 -->
         <section class="slide" data-slide="7">
             <div class="slide-content">
-                <span class="mono accent">Research Item 03 — Interoperability</span>
-                <h2>3DGS ↔ BIM 相互変換</h2>
-                <div class="bim-interop-diagram">
-                    <div class="interop-flow">
-                        <div class="interop-node left">
-                            <div class="node-visual">
-                                <div class="gaussian-sphere"></div>
-                                <div class="gaussian-sphere"></div>
-                                <div class="gaussian-sphere"></div>
-                            </div>
-                            <span class="node-title">3DGS</span>
-                            <span class="node-desc">フォトリアル表現</span>
+                <div class="research-header">
+                    <span class="research-num">研究項目 3</span>
+                    <h2>3DGS ↔ BIM 相互変換</h2>
+                </div>
+                <div class="bim-diagram-large">
+                    <div class="bim-flow">
+                        <div class="bim-node left-node">
+                            <div class="node-icon-large">🔮</div>
+                            <h4>3DGS</h4>
+                            <p>フォトリアル表現</p>
+                            <ul class="node-features">
+                                <li>視覚的に正確</li>
+                                <li>実空間を忠実に再現</li>
+                            </ul>
                         </div>
-                        <div class="interop-arrows">
-                            <div class="arrow-pair">
-                                <div class="arrow-line to-right">
-                                    <span>構造抽出</span>
-                                </div>
-                                <div class="arrow-line to-left">
-                                    <span>リアル化</span>
-                                </div>
+                        <div class="bim-arrows">
+                            <div class="arrow-row">
+                                <span class="arrow-label">構造抽出・簡略化</span>
+                                <span class="arrow-icon">→</span>
                             </div>
-                            <div class="hitl-badge">
+                            <div class="hitl-box">
                                 <span class="hitl-icon">👤</span>
-                                <span>Human-in-the-loop</span>
+                                <div>
+                                    <strong>Human-in-the-loop</strong>
+                                    <p>完全自動ではなく半自動支援</p>
+                                </div>
+                            </div>
+                            <div class="arrow-row">
+                                <span class="arrow-icon">←</span>
+                                <span class="arrow-label">リアル化・拡張</span>
                             </div>
                         </div>
-                        <div class="interop-node right">
-                            <div class="node-visual">
-                                <div class="bim-box"></div>
-                            </div>
-                            <span class="node-title">BIM</span>
-                            <span class="node-desc">構造化データ</span>
+                        <div class="bim-node right-node">
+                            <div class="node-icon-large">📐</div>
+                            <h4>BIM</h4>
+                            <p>構造化データ</p>
+                            <ul class="node-features">
+                                <li>設計意図を含む</li>
+                                <li>属性情報が豊富</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="interop-features">
-                        <div class="feature-item">
-                            <span class="feature-icon">🔍</span>
-                            <div>
-                                <strong>差分検出</strong>
-                                <p>設計と実空間の差異を可視化</p>
-                            </div>
+                    <div class="bim-use-cases">
+                        <div class="use-case">
+                            <span class="use-icon">🔍</span>
+                            <strong>差分検出</strong>
+                            <p>設計と実空間の<br>差異を可視化</p>
                         </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">📐</span>
-                            <div>
-                                <strong>半自動変換</strong>
-                                <p>候補抽出→人手で最終確定</p>
-                            </div>
+                        <div class="use-case">
+                            <span class="use-icon">🏭</span>
+                            <strong>As-built検証</strong>
+                            <p>建設・施設管理<br>での活用</p>
                         </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">🔄</span>
-                            <div>
-                                <strong>重畳表示</strong>
-                                <p>3DGS上にBIM要素をオーバーレイ</p>
-                            </div>
+                        <div class="use-case">
+                            <span class="use-icon">🔄</span>
+                            <strong>重畳表示</strong>
+                            <p>3DGS上にBIM要素を<br>オーバーレイ</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Slide 8: Research Item 4 - Trusted DT -->
+        <!-- Slide 8: Research Item 4 -->
         <section class="slide" data-slide="8">
             <div class="slide-content">
-                <span class="mono accent">Research Item 04 — Governance</span>
-                <h2>Trusted Digital Twin 基盤</h2>
-                <div class="trusted-dt-full">
-                    <div class="dt-pillars">
-                        <div class="dt-pillar">
-                            <div class="pillar-icon">P</div>
-                            <h3>Provenance</h3>
-                            <p class="pillar-subtitle">来歴管理</p>
-                            <ul class="pillar-list">
-                                <li>取得日時・機材記録</li>
-                                <li>処理パラメータ</li>
-                                <li>デジタル署名</li>
-                                <li>改ざん検知</li>
-                            </ul>
-                        </div>
-                        <div class="dt-pillar">
-                            <div class="pillar-icon">V</div>
-                            <h3>Versioning</h3>
-                            <p class="pillar-subtitle">差分管理</p>
-                            <ul class="pillar-list">
-                                <li>空間データのバージョン管理</li>
-                                <li>差分データの効率的配信</li>
-                                <li>時系列での変化追跡</li>
-                                <li>ロールバック機能</li>
-                            </ul>
-                        </div>
-                        <div class="dt-pillar">
-                            <div class="pillar-icon">A</div>
-                            <h3>Access</h3>
-                            <p class="pillar-subtitle">利用制御</p>
-                            <ul class="pillar-list">
-                                <li>所有権・利用権の明確化</li>
-                                <li>用途別アクセス制御</li>
-                                <li>監査ログ</li>
-                                <li>組織間データ共有</li>
-                            </ul>
-                        </div>
+                <div class="research-header">
+                    <span class="research-num">研究項目 4</span>
+                    <h2>Trusted Digital Twin 基盤</h2>
+                </div>
+                <p class="section-lead">ロボットが空間データに基づいて自律行動する社会では、<br><strong>データの信頼性・真正性が安全性に直結</strong>する</p>
+                <div class="pva-diagram">
+                    <div class="pva-pillar">
+                        <div class="pva-icon">P</div>
+                        <h4>Provenance</h4>
+                        <p class="pva-subtitle">真正性・来歴</p>
+                        <ul>
+                            <li>取得日時・機材・作業者</li>
+                            <li>処理パラメータ記録</li>
+                            <li>デジタル署名</li>
+                            <li>改ざん検知</li>
+                        </ul>
                     </div>
-                    <div class="dt-foundation">
-                        <div class="foundation-box">
-                            <span class="foundation-icon">🔐</span>
-                            <div>
-                                <strong>秘密計算技術との連携</strong>
-                                <p>既存共同研究の知見を活用し、機微情報を秘匿したまま真正性確認・監査を実現</p>
-                            </div>
-                        </div>
+                    <div class="pva-pillar">
+                        <div class="pva-icon">V</div>
+                        <h4>Versioning</h4>
+                        <p class="pva-subtitle">更新履歴・差分</p>
+                        <ul>
+                            <li>空間データのバージョン管理</li>
+                            <li>差分データの効率的配信</li>
+                            <li>時系列での変化追跡</li>
+                            <li>ロールバック機能</li>
+                        </ul>
+                    </div>
+                    <div class="pva-pillar">
+                        <div class="pva-icon">A</div>
+                        <h4>Access</h4>
+                        <p class="pva-subtitle">権利・利用制御</p>
+                        <ul>
+                            <li>所有権・利用権の明確化</li>
+                            <li>用途別アクセス制御</li>
+                            <li>監査ログ</li>
+                            <li>組織間データ共有</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="secret-computation">
+                    <span class="sc-icon">🔐</span>
+                    <div>
+                        <strong>秘密計算技術との連携</strong>
+                        <p>既存共同研究の知見を活用。機微な施設情報を秘匿したまま真正性確認・監査を実現。</p>
                     </div>
                 </div>
             </div>
@@ -455,93 +438,102 @@
         <!-- Slide 9: Why AIST + Timeline -->
         <section class="slide" data-slide="9">
             <div class="slide-content">
-                <span class="mono accent">03 — Why AIST?</span>
-                <h2>産総研との共同研究である必然性</h2>
-                <div class="why-aist-layout">
-                    <div class="why-aist-reasons">
-                        <div class="reason-card">
-                            <span class="reason-icon">⚖️</span>
-                            <h4>客観的評価</h4>
-                            <p>中立的な第三者機関としての評価プロトコル策定</p>
-                        </div>
-                        <div class="reason-card">
-                            <span class="reason-icon">🏭</span>
-                            <h4>実証フィールド</h4>
-                            <p>ロボットイノベーション研究棟など最先端施設での検証</p>
-                        </div>
-                        <div class="reason-card">
-                            <span class="reason-icon">🌐</span>
-                            <h4>国際標準化</h4>
-                            <p>ISO/IEC等の国際規格を見据えたデータ要件の整理</p>
-                        </div>
-                        <div class="reason-card highlight">
-                            <span class="reason-icon">🔗</span>
-                            <h4>シナジー</h4>
-                            <p>「秘密計算」共同研究を<strong>Trusted Digital Twin</strong>へ発展</p>
-                        </div>
+                <h2>なぜ産総研との共同研究か</h2>
+                <div class="why-grid">
+                    <div class="why-card">
+                        <span class="why-icon">⚖️</span>
+                        <h4>客観的評価</h4>
+                        <p>中立的な第三者機関として<br>学術的な評価プロトコルを策定</p>
                     </div>
-                    <div class="timeline-section">
-                        <h4 class="timeline-title">研究計画タイムライン</h4>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-year">2026</div>
-                                <div class="timeline-content">
-                                    <strong>Year 1: 基盤構築</strong>
-                                    <p>3DGSデータ取得システム、音声アノテーション初期版、評価プロトコル策定</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-year">2027</div>
-                                <div class="timeline-content">
-                                    <strong>Year 2: 実装・検証</strong>
-                                    <p>空間知能システム実装、ロボット実証実験、BIM変換アルゴリズム開発</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-year">2028</div>
-                                <div class="timeline-content">
-                                    <strong>Year 3: 統合・公開</strong>
-                                    <p>システム統合、複数環境検証、オープンデータセット公開、標準化提案</p>
-                                </div>
-                            </div>
+                    <div class="why-card">
+                        <span class="why-icon">🏭</span>
+                        <h4>実証フィールド</h4>
+                        <p>ロボットイノベーション研究棟など<br>最先端施設での検証環境</p>
+                    </div>
+                    <div class="why-card">
+                        <span class="why-icon">🌐</span>
+                        <h4>国際標準化</h4>
+                        <p>ISO/IEC等への提案を見据えた<br>技術要件の整理</p>
+                    </div>
+                    <div class="why-card highlight">
+                        <span class="why-icon">🔗</span>
+                        <h4>既存連携の発展</h4>
+                        <p>秘密計算の共同研究を<br><strong>Trusted Digital Twin</strong>へ拡張</p>
+                    </div>
+                </div>
+                <div class="timeline-compact">
+                    <h4>3年間の研究計画</h4>
+                    <div class="timeline-bar">
+                        <div class="timeline-segment y1">
+                            <span class="year">2026</span>
+                            <span class="phase">基盤構築</span>
+                            <p>データ取得システム構築<br>評価プロトコル策定</p>
+                        </div>
+                        <div class="timeline-segment y2">
+                            <span class="year">2027</span>
+                            <span class="phase">実装・検証</span>
+                            <p>空間知能システム実装<br>ロボット実証実験</p>
+                        </div>
+                        <div class="timeline-segment y3">
+                            <span class="year">2028</span>
+                            <span class="phase">統合・公開</span>
+                            <p>オープンデータセット公開<br>標準化提案</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Slide 10: Summary -->
+        <!-- Slide 10: Social Implementation & Summary -->
         <section class="slide" data-slide="10">
-            <div class="slide-content centered">
-                <span class="mono accent">Summary</span>
-                <h2 class="title-lg">空間知能の社会実装へ</h2>
-                <div class="summary-grid">
-                    <div class="summary-stat">
-                        <span class="stat-value">3年</span>
-                        <span class="stat-label">研究期間</span>
+            <div class="slide-content">
+                <h2>社会実装と研究の意義</h2>
+                <div class="implementation-timeline">
+                    <div class="impl-phase">
+                        <span class="impl-term">短期 3-5年</span>
+                        <div class="impl-content">
+                            <strong>スマートビル・スマートファクトリー</strong>
+                            <p>ロボット導入支援、As-built検証システム</p>
+                        </div>
                     </div>
-                    <div class="summary-stat">
-                        <span class="stat-value">3,600万円</span>
-                        <span class="stat-label">総予算</span>
+                    <div class="impl-phase">
+                        <span class="impl-term">中期 5-10年</span>
+                        <div class="impl-content">
+                            <strong>空間データ基盤の標準化</strong>
+                            <p>自律移動ロボット向けデータ流通プラットフォーム</p>
+                        </div>
                     </div>
-                    <div class="summary-stat">
-                        <span class="stat-value">4項目</span>
-                        <span class="stat-label">研究テーマ</span>
-                    </div>
-                    <div class="summary-stat">
-                        <span class="stat-value">6-9件</span>
-                        <span class="stat-label">国際会議論文（目標）</span>
+                    <div class="impl-phase">
+                        <span class="impl-term">長期 10年〜</span>
+                        <div class="impl-content">
+                            <strong>Society 5.0 空間知能社会</strong>
+                            <p>ロボット・AI・人が共生する空間デジタルツインインフラ</p>
+                        </div>
                     </div>
                 </div>
-                <div class="final-message">
-                    <p>ロボット・AIが実空間で自律的に活動するための基盤技術として、<br><strong>次世代空間表現と知能化の融合</strong>に取り組みます。</p>
-                </div>
-                <div class="cta-section">
-                    <span class="cta-text">共同研究のご検討をお願いいたします</span>
-                </div>
-                <div class="footer-info">
-                    <span class="mono">AIST Joint Research Proposal</span>
-                    <span class="mono">Confidential (Draft)</span>
+                <div class="summary-box">
+                    <div class="summary-message">
+                        <p>ロボット・AIが実空間で自律的に活動するための基盤技術として<br><strong class="gradient-text">次世代空間表現と知能化の融合</strong>に取り組みます</p>
+                    </div>
+                    <div class="summary-stats">
+                        <div class="sum-stat">
+                            <span class="sum-value">3年</span>
+                            <span class="sum-label">研究期間</span>
+                        </div>
+                        <div class="sum-stat">
+                            <span class="sum-value">3,600万</span>
+                            <span class="sum-label">総予算</span>
+                        </div>
+                        <div class="sum-stat">
+                            <span class="sum-value">4項目</span>
+                            <span class="sum-label">研究テーマ</span>
+                        </div>
+                        <div class="sum-stat">
+                            <span class="sum-value">6-9件</span>
+                            <span class="sum-label">論文目標</span>
+                        </div>
+                    </div>
+                    <div class="cta-button">共同研究のご検討をお願いいたします</div>
                 </div>
             </div>
         </section>
@@ -550,12 +542,8 @@
 
     <!-- Navigation Controls -->
     <div class="slide-controls">
-        <button class="nav-btn prev" id="prevBtn" aria-label="Previous slide">
-            <span>←</span>
-        </button>
-        <button class="nav-btn next" id="nextBtn" aria-label="Next slide">
-            <span>→</span>
-        </button>
+        <button class="nav-btn" id="prevBtn" aria-label="Previous">←</button>
+        <button class="nav-btn" id="nextBtn" aria-label="Next">→</button>
     </div>
 
     <!-- Slide Dots -->
