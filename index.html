@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Summary: AIST Joint Research Proposal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+
+    <header>
+        <div class="container nav-flex">
+            <div class="logo">AIST JOINT RESEARCH</div>
+            <span class="tag mono">DRAFT v2.0</span>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <span class="mono" style="color: var(--accent-primary); margin-bottom: 16px; display: block;">共同研究提案書 | Executive Summary</span>
+            <h1>
+                3D Gaussian Splatting<br>
+                <span style="color: var(--text-secondary);">×</span> Spatial Intelligence
+            </h1>
+            <p>
+                ロボット・AIが実空間を「理解」するための次世代空間表現。<br>
+                フォトリアリスティックな視覚情報と、強固なデータガバナンス（Trusted Digital Twin）の融合。
+            </p>
+
+            <div class="hero-stats mono">
+                <div class="stat-item">
+                    <span>Duration</span>
+                    <strong>2026 - 2028</strong>
+                </div>
+                <div class="stat-item">
+                    <span>Partner</span>
+                    <strong>AIST Japan</strong>
+                </div>
+                <div class="stat-item">
+                    <span>Budget</span>
+                    <strong>36M JPY / 3yr</strong>
+                </div>
+                <div class="stat-item">
+                    <span>Target KPI</span>
+                    <strong>Reloc. err. &lt;10cm</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison-section">
+        <div class="container">
+            <span class="section-label mono">01 — The Challenge & Solution</span>
+            <div class="comparison-grid">
+                <div class="problem-box">
+                    <h2 style="margin-bottom: 24px; font-size: 1.8rem;">従来の空間表現の限界</h2>
+                    <div class="list-item">
+                        <span class="icon-cross">✕</span>
+                        <div>
+                            <strong>点群 (Point Cloud)</strong>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 4px;">スカスカな密度、テクスチャ欠落、計算負荷大。</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <span class="icon-cross">✕</span>
+                        <div>
+                            <strong>BIM / CAD</strong>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 4px;">設計データと実空間（As-built）の乖離、静的。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <h2 class="gradient-text" style="margin-bottom: 24px; font-size: 1.8rem;">本研究のアプローチ</h2>
+                    <div class="list-item">
+                        <span class="icon-check">✓</span>
+                        <div>
+                            <strong>3DGS + Semantic</strong>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 4px;">フォトリアルな視覚情報に「意味」を付与し、ロボットの認識精度を向上。</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <span class="icon-check">✓</span>
+                        <div>
+                            <strong>Trusted Digital Twin</strong>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 4px;">データの真正性・来歴・権利を管理し、社会実装に耐えうるインフラへ。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="deliverables-section">
+        <div class="container">
+            <span class="section-label mono">Key Deliverables</span>
+            <h2 style="font-size: 1.5rem; margin-bottom: 32px;">本研究の成果物</h2>
+            <div class="deliverables-grid">
+                <div class="deliverable-card">
+                    <div class="icon">📊</div>
+                    <strong>評価プロトコル＋ベンチマーク</strong>
+                    <p>3DGS空間表現のロボットタスク性能評価基準とデータセット</p>
+                </div>
+                <div class="deliverable-card">
+                    <div class="icon">🎙️</div>
+                    <strong>空間クエリ/指示理解モジュール</strong>
+                    <p>音声アノテーション＋Neuro-Symbolicな空間知能システム</p>
+                </div>
+                <div class="deliverable-card">
+                    <div class="icon">🔐</div>
+                    <strong>Trusted DT参照アーキテクチャ</strong>
+                    <p>Provenance/Versioning/Accessを統合する実装と要件仕様</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <span class="section-label mono">02 — Core Research Items</span>
+            <h2 style="font-size: 2rem; max-width: 600px; margin-bottom: 40px;">
+                4つの研究開発項目と<br>技術的アプローチ
+            </h2>
+
+            <div class="bento-grid">
+                <div class="card card-lg">
+                    <span class="card-number">01</span>
+                    <span class="mono" style="color: var(--accent-primary);">Foundation</span>
+                    <div>
+                        <h3>3DGS環境表現の構築と評価</h3>
+                        <p>レンダリング品質だけでなく、ロボットの「再局在化（Relocalization）精度」や「経路計画成功率」を主眼に置いたパラメータ最適化を実施。</p>
+                        <p class="kpi-badge">
+                            <strong>主要KPI:</strong> Latency / GPU memory footprint / Incremental update cost
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="card-number">02</span>
+                    <span class="mono" style="color: var(--accent-primary);">Intelligence</span>
+                    <div>
+                        <h3>Semantic Integration</h3>
+                        <p><strong>Neuro-Symbolic Approach:</strong><br>LLMは「意味解釈」に専念させ、幾何計算は既存アルゴリズムで担保。音声アノテーションで現場負担を軽減。</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="card-number">03</span>
+                    <span class="mono" style="color: var(--accent-primary);">Interoperability</span>
+                    <div>
+                        <h3>BIM 相互運用</h3>
+                        <p>完全自動化ではなく<strong>Human-in-the-loop</strong>による支援技術。3DGSとBIMを重畳し、差分を可視化・管理する。</p>
+                    </div>
+                </div>
+
+                <div class="card card-lg" style="border-color: var(--accent-primary); background: #fdfdff;">
+                    <span class="card-number">04</span>
+                    <span class="mono" style="color: var(--accent-primary);">Governance</span>
+                    <div style="width: 100%;">
+                        <h3>Trusted Digital Twin 基盤</h3>
+                        <p>既存の「秘密計算」共同研究を発展させ、空間データのガバナンス（真正性・履歴・権利）を確立する。</p>
+
+                        <div class="trusted-dt-diagram">
+                            <div class="dt-line"></div>
+                            <div class="dt-node">
+                                <div class="dt-icon">P</div>
+                                <strong style="font-size: 0.9rem;">Provenance</strong>
+                                <br><span style="font-size: 0.75rem; color: var(--text-secondary);">来歴管理</span>
+                            </div>
+                            <div class="dt-node">
+                                <div class="dt-icon">V</div>
+                                <strong style="font-size: 0.9rem;">Versioning</strong>
+                                <br><span style="font-size: 0.75rem; color: var(--text-secondary);">差分管理</span>
+                            </div>
+                            <div class="dt-node">
+                                <div class="dt-icon">A</div>
+                                <strong style="font-size: 0.9rem;">Access</strong>
+                                <br><span style="font-size: 0.75rem; color: var(--text-secondary);">利用制御</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-aist-section">
+        <div class="container">
+            <span class="section-label mono">03 — Why AIST?</span>
+            <div class="why-aist-header">
+                <h2 style="font-size: 2rem; max-width: 500px;">
+                    産総研との共同研究である<br>必然性
+                </h2>
+                <p style="max-width: 400px; color: var(--text-secondary);">
+                    単なる技術開発に留まらず、標準化と社会実装を見据えた「信頼の基盤」を構築するために。
+                </p>
+            </div>
+
+            <div class="why-aist-grid">
+                <div>
+                    <h4>客観的評価</h4>
+                    <p>中立的な第三者機関としての評価プロトコル策定。</p>
+                </div>
+                <div>
+                    <h4>実証フィールド</h4>
+                    <p>ロボットイノベーション研究棟など、最先端施設での検証。</p>
+                </div>
+                <div>
+                    <h4>国際標準化</h4>
+                    <p>ISO/IEC等の国際規格を見据えたデータ要件の整理。</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--accent-primary);">シナジー</h4>
+                    <p>進行中の「秘密計算」共同研究を<strong style="color: var(--accent-primary);">Trusted Digital Twin</strong>として空間データ領域へ発展させる自然な拡張。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h2>空間知能の社会実装へ</h2>
+                <p>2026-2028年度 共同研究提案</p>
+                <a href="#" class="btn-primary">
+                    <span>提案書PDFを開く</span>
+                    <span>→</span>
+                </a>
+            </div>
+            <div class="footer-meta">
+                <span class="mono">AIST Joint Research Proposal</span>
+                <span class="mono">Confidential (Draft)</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
